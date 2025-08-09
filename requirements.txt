@@ -1,0 +1,9 @@
+pdfminer.six
+PyPDF2
+pdfplumber
+nltk
+spacy
+flask
+fastapi
+pandas
+gunicorn
