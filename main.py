@@ -1,9 +1,16 @@
+# run_server.py
+
+import os
 import uvicorn
 
-if __name__ == "__main__":
+def main():
+    port = int(os.environ.get("PORT", 8080))
     uvicorn.run(
-        "app:app",  # app.py -> app object
+        "app:app",  # Refers to the 'app' object in app.py
         host="0.0.0.0",
-        port=int(__import__("os").environ.get("PORT", 8080)),
+        port=port,
         reload=False
     )
+
+if __name__ == "__main__":
+    main()
