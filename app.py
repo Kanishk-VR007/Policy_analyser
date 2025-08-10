@@ -1,6 +1,6 @@
+import uvicorn
 import os
 import io
-import uvicorn
 import time
 import json
 import hashlib
@@ -473,4 +473,5 @@ async def batch_run(req: BatchRunRequest):
         else:
             answers.append(ans_resp.get("raw_llm", "no_answer"))
     return {"answers": answers}
+
 
